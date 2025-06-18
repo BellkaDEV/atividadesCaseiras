@@ -1,9 +1,10 @@
 #include <iostream> 
 using namespace std;
+#include <iomanip>
 
 int main() {
 
-    const int tamanho = 90;
+    const int tamanho = 488;
     double vetor[tamanho];
 
   vetor[0] = 1;
@@ -14,7 +15,16 @@ int main() {
 
     long double antpe = vetor[tamanho - 1]; //ant penultimo
     long double pe = vetor[tamanho - 2]; //penultimo
-    long double razAurea = pe / antpe; //razao aurea
+    long double razAurea = antpe / pe; //razao aurea
+
+    cout << "Sequencia de fib" << endl;
+
+    for (int i = 0; i < tamanho; i++) {
+        cout << vetor[i] << " ";
+    }
+    cout << endl;
+    cout << "/////////// ///////////" << endl;
+    cout << fixed << setprecision(65);
     cout << "Aproximacao: " << razAurea << endl;
 
 return 0;
